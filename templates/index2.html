@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Text summarize</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index2.css') }}">
+</head>
+
+<body style="color:white;">
+
+	<h1 style="color:white;">Text summarize done</h1>
+    <h2 style="color:white;">Texts</h2>
+        {{ usertext}}
+     <br>
+    <h2 style="color:white;">Summary</h2>
+   {{ sumtext }}
+
+    <p align="center"><a href="/"><button>Back</button></a></p>
+
+</body>
+</html>

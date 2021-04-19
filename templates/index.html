@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Text summarize</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body style="color:white;">
+ <div class="input">
+	<h1 align="center">Text summarize</h1>
+    <form action="{{ url_for('handle_data') }}" method="post">
+    <table class="inputContent" align="center">
+     <tr><td><textarea name="usertext" rows="20" cols="40" placeholder="Enter text to summarize"></textarea></td></tr>
+    <tr><td><input type="text" name="numsen"></td></tr>
+    <tr><td><input type="submit"></td></tr>
+    </table>
+    </form>
+   <br>
+   <br>
+ {{ sumtext }}
+
+ </div>
+
+
+</body>
+</html>
