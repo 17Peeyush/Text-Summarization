@@ -16,8 +16,8 @@ def handle_data():
     userText = request.form['usertext']
     num=int(request.form['numsen'])
     result,usertext=textsummarize.textSummarize(userText,num)
-    # return render_template('index.html',sumtext=result)
-    return render_template('index2.html', sumtext=result, usertext=usertext)
+    return render_template('index.html',sumtext=result)
+    # return render_template('index2.html', sumtext=result, usertext=usertext)
 
 if __name__=="__main__":
     app.run()
