@@ -38,7 +38,10 @@ def createIDF(processedSent,freqList):
             sent=word_tokenize(sent)
             if key in sent:
                 occurence+=1
-        idfDic[key]=math.log10(l/occurence)
+        if occurence==0:
+            idfDic[key]=0
+        else:
+            idfDic[key]=math.log10(l/occurence)
 #         idfDic[key]=(l/occurence)
     return idfDic
 
